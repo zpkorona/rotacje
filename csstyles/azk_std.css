@@ -16,10 +16,10 @@
 }
 
 body {
-  background: #f3fbf3 url("../_pics_/AZetKa.gif");
+  background: #f3fbf3 url("../mediafiles/AZetKa.gif");
 /*
   background-color: #f3fbf3;/*f0fff0*/
-  background-image: url("../_pics_/AZetKa.gif");
+  background-image: url("../mediafiles/AZetKa.gif");
   background-size: 20%;
 */
   margin: 0px;
