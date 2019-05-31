@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+  <title>Rotacje i inne</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AZKstrony rotacje i inne">
+  <meta name="keywords" content="programowanie, strony internetowe, C++, Java Script, HTML, Php">
+  <meta name="author" content="AZetKa studio">
+  <script language="JavaScript" type="text/javascript" src="js/azkstrony.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/azkstrony.css">
+</head>
+
+<body>
+<div class="params-table">
+
+  <div class='param-line'>
+    <div class='param-name'>
+      1. Liczba wyborów <em>k</em> elementów z <em>n</em>
+    </div> 
+    <div class='param-value'>
+      L<sub>w</sub> = n! / (k!*(n-k)!)
+    </div>
+  </div>
+
+  <div class='param-line'>
+    <div class='param-name'>
+      2. Liczba wyborów <em>k</em> elementów z <em>n</em> tak by były wszystkie permutacje, czyli każdy element był na każdej pozycji tyle samo razy
+    </div> 
+    <div class='param-value'>
+      L<sub>k</sub> = [n! / (k! * (n-k)!)] * k! = n! / (n-k)!
+    </div>
+  </div>
+
+  <div class='param-line'>
+    <div class='param-name'>
+      2.a W tym każdy element dla wszystkich kombinacji będzie na 1. miejscu:
+    </div> 
+    <div class='param-value'>
+      L<sub>e1</sub> = [(n-1)! / ((k-1)! * (n-k)!)] * (k-1)! = (n-1)!/(n-k)! = L<sub>k</sub> / n
+    </div>
+  </div>
+
+  <div class='param-line'>
+    <div class='param-name'>
+      2.b czyli jesli każdy element ma być tyle razy na pierwszym miejscu to liczba kombinacji to:
+    </div> 
+    <div class='param-value'>
+      L<sub>1</sub> = L<sub>e1</sub> * n = [(n-1)! / (n-k)!] * n = n! / (n-k)! = L<sub>k</sub>
+    </div>
+  </div>
+
+  <div class='param-line'>
+    <div class='param-name'>
+      3. Liczba wystapień każdego z <em>n</em> elementów to:
+    </div> 
+    <div class='param-value'>
+      L<sub>e</sub> = L<sub>r</sub> * k / n, o ile L<sub>r</sub> jest wielokrotnością L<sub>w</sub><br>
+      L<sub>w</sub> * k / n = (n-1)! / ((k-1)!(n-k)!)<br>
+      L<sub>k</sub> * k / n = k * (n-1)! / (n-k)!
+    </div>
+  </div>
+
+ 
+  
+
+  <div class='param-line'>
+    <div class='param-name'>
+      Permutacja zbioru n - elementów<br>
+      - obejmuje wszystkie elementy<br>
+      - kolejność jest istotna<br>
+      P - liczba permutacji<br>
+      L - liczba wystąpień każdego elementu jako pierszy
+      </div> 
+    <div class='param-value'>
+      P = n!<br>
+      L = (n-1)!
+    </div>
+  </div>
+
+  <div class='param-line'>
+    <div class='param-name'>
+      Wariacja bez powtórzeń k-elementowa ze zbioru n - elementów<br>
+      - obejmuje k z n elementów<br>
+      - kolejność jest istotna<br>
+      P - liczba wariacji<br>
+      L - liczba wystąpień każdego elementu jako pierszy
+      </div> 
+    <div class='param-value'>
+      P = n!/(n-k)!<br>
+      L = (n-1)!/(n-k)!
+    </div>
+  </div>
+  
+  <div class='param-line'>
+    <div class='param-name'>
+      Kombinacja k-elementowa ze zbioru n - elementów<br>
+      - obejmuje k z n elementów<br>
+      - kolejność NIE jest istotna<br>
+      P - liczba kombinacji<br>
+      L - liczba wystąpień każdego elementu jako pierszy
+      </div> 
+    <div class='param-value'>
+    P = n!/k!(n-k)!</div>
+    L = &lt;0;(k-1)&gt;
+  </div>
+</div>
+
+<h2>bardzie praktycznie</h2>
+<div class="params-table">
+  <div class='param-line'>
+    <div class='param-name'>
+      n próbek<br>
+      każdy ma przetestować wszystkie próbki<br>
+      przetestowana ma być każda kolejność próbek
+    </div>
+    <div class='param-value'>
+      Pmin = n!<br>
+      Lmin = (n-1)!
+    </div>
+  </div>
+
+  <div class='param-line'>
+    <div class='param-name'>
+      n próbek<br>
+      każdy ma przetestować k próbek<br>
+      przetestowana ma być każda kolejność próbek
+    </div>
+    <div class='param-value'>
+      P = n!/(n-k)!<br>
+      L = (n-1)!/(n-k)!
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+
+</html>
