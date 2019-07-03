@@ -1,8 +1,20 @@
 /*kolory
+JASNY
 #f3fbf3 - jasny, tło
 #a0d0a0 - ciemny, pasek
 #d6f5d6 - jasne tło w menu
 #e6f0e6 - pasek w nagłówkach
+
+CIEMNY
+body, select, input {
+  background-color: #1a1a22;
+  color: #e6f6ff;
+}
+  background-color: #262630; 
+  border: 1px solid grey;
+  box-shadow: 2px 2px darkgrey;
+
+
 */
 
 * {
@@ -16,16 +28,15 @@
 }
 
 body {
-  background: #f3fbf3 url("../mediafiles/AZetKa.gif");
-/*
-  background-color: #f3fbf3;/*f0fff0*/
-  background-image: url("../mediafiles/AZetKa.gif");
-  background-size: 20%;
-*/
-  margin: 0px;
+  background: #1a1a22 url("../img/AZetKa_dark.gif");
+  color: #e6f6ff;
   font: normal 1em Verdana, Geneva, sans-serif;
+  margin: 0px;
 }
-
+select, input, textarea {
+  background-color: #1a1a22;
+  color: #e6f6ff;
+}
 /*
 div {
   border: 1px solid black;
@@ -34,8 +45,8 @@ div {
 
 button {
   font: normal 1em Verdana, Geneva, sans-serif;
-  background-color: #a0d0a0;/*#adebad  #47d147;*/
-  border-color: #d6f5d6;/*e6f0e6 d6f5d6*/
+  background-color: grey;/*#a0d0a0;/*#adebad  #47d147;*/
+  border-color: lightgrey;/*#d6f5d6;/*e6f0e6 d6f5d6*/
 }
 .no-display {
   display: none;
@@ -52,26 +63,57 @@ button {
 .text-right {
   text-align: right;
 }
+.canvas {
+  margin: 5px;
+  padding: 5px;
+  border: 3px solid darkgrey;
+}
+
 .azk-canvas {
   background-color: #d6f5d6;
   margin: 0px 5px 5px 0px;
   border: 5px solid #a0d0a0;
   box-shadow: 5px 5px #d6f5d6;
 }
+.dark-canvas {
+  background-color: #1a1a22;
+  color: #e6f6ff;
+  margin: 5px;
+  padding: 5px;
+  border: 3px solid darkgrey;
+  box-shadow: 3px 5px #2a2a32;
+}
+.blackboard-canvas {
+  background-color: #262630;
+  color: #e6f6ff;
+  margin: 5px;
+  padding: 5px;
+  border: 3px solid darkgrey;
+  box-shadow: 3px 5px #2a2a32;
+
 .grey-canvas {
+  background-color: grey;
+  color: #e6f6ff;
+  margin: 5px;
+  padding: 5px;
+  border: 3px solid darkgrey;
+  box-shadow: 3px 10px lightgrey;
+}
+.lightgrey-canvas {
   background-color: lightgrey;
-  margin: 10px;
-  padding: 10px;
-  border: 10px solid darkgrey;
-  box-shadow: 10px 10px lightgrey;
+  margin: 5px;
+  padding: 5px;
+  border: 3px solid darkgrey;
+  box-shadow: 3px 10px lightgrey;
 }
 .green-canvas {
   background-color: lightgreen;
   margin: 5px;
   padding: 5px;
-  border: 5px solid darkgreen;
-  box-shadow: 10px 10px lightgreen;
+  border: 3px solid darkgreen;
+  box-shadow: 3px 5px lightgreen;
 }
+
 h2.subtitle {
   font: italic 1.3em Verdana, Geneva, sans-serif;
   padding: 5px;
